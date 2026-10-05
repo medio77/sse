@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FontPicker } from "@/components/font-picker";
 
 const NAV = [{ href: "/poems", label: "غزل‌ها" }];
 
@@ -31,6 +32,7 @@ export function SiteHeader() {
               ))}
             </ul>
           </nav>
+          <FontPicker />
         </div>
       </div>
     </header>

@@ -1,21 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Vazirmatn, Noto_Naskh_Arabic } from "next/font/google";
+import { irannastaliq, vazirmatn } from "@/lib/font-local";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const vazirmatn = Vazirmatn({
-  subsets: ["arabic", "latin"],
-  display: "swap",
-  variable: "--font-vazirmatn",
-});
-
-const naskh = Noto_Naskh_Arabic({
-  subsets: ["arabic"],
-  display: "swap",
-  weight: ["400", "500", "600"],
-  variable: "--font-naskh",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -37,9 +25,13 @@ export default function RootLayout({
     <html
       lang="fa"
       dir="rtl"
-      className={`${vazirmatn.variable} ${naskh.variable}`}
+      className={`${vazirmatn.variable} ${irannastaliq.variable}`}
     >
-      <body className="min-h-dvh flex flex-col">
+      <body className="min-h-dvh flex flex-col" data-font="nastaliq">
+        <style>{`
+          body[data-font="nastaliq"] { --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+          body[data-font="vazirmatn"] { --font-poem: var(--font-vazirmatn), serif; }
+        `}</style>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:start-3 focus:z-50 focus:rounded-sm focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white"

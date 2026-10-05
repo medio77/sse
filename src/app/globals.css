@@ -4,7 +4,7 @@
   /* Interface type: a clean, contemporary Persian sans. */
   --font-sans: var(--font-vazirmatn), ui-sans-serif, system-ui, sans-serif;
   /* Reading type: a naskh face, chosen for long-form Persian literary text. */
-  --font-poem: var(--font-naskh), var(--font-vazirmatn), serif;
+  --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif;
 
   /* Neutral, slightly warm paper-grey. Not parchment. */
   --color-paper: #faf9f7;
@@ -52,4 +52,10 @@
   .tabular-fa {
     font-variant-numeric: tabular-nums;
   }
+
+  /* Font-picker: three body-level overrides */
+  body[data-font="nastaliq"] { --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+  body[data-font="vazirmatn"] { --font-poem: var(--font-vazirmatn), serif; }
+  body[data-font="nastaliq"] .font-poem { font-family: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+  body[data-font="vazirmatn"] .font-poem { font-family: var(--font-vazirmatn), serif; }
 }
