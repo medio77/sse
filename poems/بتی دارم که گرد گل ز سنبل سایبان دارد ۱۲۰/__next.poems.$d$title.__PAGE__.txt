@@ -1,0 +1,75 @@
+1:"$Sreact.fragment"
+2:I[22016,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],""]
+4:I[97367,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"ViewportBoundary"]
+3:T700,بتی دارم که گرد گل ز سنبل سايه‌بان دارد 
+
+بهار عارضش خطی به خون ارغوان دارد 
+
+غبار خط بپوشانيد (نپوشانید) خورشيد رخش يا رب 
+
+بقای (حیات) جاودانش ده که حسن جاودان دارد 
+
+چو عاشق می‌شدم گفتم که بردم گوهر مقصود 
+
+ندانستم که اين دريا چه موج خون فشان دارد 
+
+ز چشمت جان نشايد (نخواهم) برد کز هر سو که می‌بينم 
+
+کمين از گوشه‌ای کرده‌ست و تير اندر کمان دارد 
+
+چو دام طره افشاند ز گرد خاطر عشاق 
+
+به غماز صبا گويد که راز ما نهان دارد 
+
+بيفشان جرعه‌ای بر خاک و حال اهل (شوکت پرس) دل بشنو 
+
+که از جمشيد و کيخسرو فراوان داستان دارد 
+
+چو در رويت بخندد گل مشو در دامش ای بلبل 
+
+که بر گل اعتمادی نيست گر حسن جهان دارد 
+
+خدا را داد من بستان از او ای شحنه مجلس 
+
+که می با ديگری خورده‌ست و با من سر گران دارد 
+
+به فتراکم اگر بندی خدا را زود صيدم کن 
+
+که آفت‌هاست در تاخير و طالب را زيان دارد 
+
+ز سرو قد دلجويت مکن محروم چشمم را 
+
+بدين (برین) سرچشمه‌اش بنشان که خوش آبی روان دارد
+
+ز خوف هجرم ايمن کن اگر اميد آن داری 
+
+که از چشم بدانديشان خدايت در امان دارد 
+
+چه عذر بخت خود (خواهم) گويم که آن عيار شهرآشوب 
+
+به تلخی کشت حافظ را و شکر در دهان دارد8:X
+f:X
+f:C
+0:{"buildId":"bfAzgJDeqGP_Uc616O1JO","data":[{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto w-full max-w-2xl px-5 py-12 sm:px-8 sm:py-20","children":[["$","$L2",null,{"href":"/poems","className":"text-sm text-ink-faint transition-colors hover:text-accent","children":"→ بازگشت به گنجورده"}],["$","header",null,{"className":"mt-8 border-b border-rule pb-8","children":[["$","h1",null,{"className":"font-poem text-xl leading-[2] font-semibold tracking-tight text-ink sm:text-2xl sm:leading-[2.1]","children":"بتی دارم که گرد گل ز سنبل سایبان دارد ۱۲۰"}],["$","p",null,{"className":"tabular-fa mt-3 text-xs text-ink-faint","children":["شماره ",376," از ","۴۹۵"," در گنجورده"]}]]}],["$","div",null,{"className":"py-10 sm:py-14","children":["$","div",null,{"dir":"rtl","lang":"fa","className":"whitespace-pre-wrap font-poem text-ink text-[1.0625rem] leading-[2.35] tracking-normal sm:text-xl sm:leading-[2.4]","children":"$3"}]}],["$","nav",null,{"aria-label":"پیمایش غزل‌ها","className":"grid gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-2","children":[["$","$L2",null,{"href":"/poems/%D9%87%D8%B1%20%D8%A2%D9%86%20%DA%A9%D9%88%20%D8%AE%D9%80%D8%A7%D8%B7%D8%B1%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%20%D9%88%20%DB%8C%D8%A7%D8%B1%20%D9%86%D8%A7%D8%B2%D9%86%DB%8C%D9%86%20%D8%AF%D8%A7%D8%B1%D8%AF%20%DB%B1%DB%B2%DB%B1","className":"group bg-surface px-5 py-4 transition-colors hover:bg-accent-soft/60","children":[["$","span",null,{"className":"block text-xs text-ink-faint","children":"غزل پیشین"}],["$","span",null,{"className":"mt-1.5 block truncate font-poem text-sm text-ink transition-colors group-hover:text-accent","children":"هر آن کو خـاطر مجموع و یار نازنین دارد ۱۲۱"}]]}],["$","$L2",null,{"href":"/poems/%D8%AF%D9%84%DB%8C%20%DA%A9%D9%87%20%D8%BA%D9%8A%D8%A8%E2%80%8C%D9%86%D9%85%D8%A7%DB%8C%20%D8%A7%D8%B3%D8%AA%20%D9%88%20%D8%AC%D8%A7%D9%85%20%D8%AC%D9%85%20%D8%AF%D8%A7%D8%B1%D8%AF%20%DB%B1%DB%B1%DB%B9","className":"group bg-surface px-5 py-4 text-start transition-colors hover:bg-accent-soft/60","children":[["$","span",null,{"className":"block text-xs text-ink-faint","children":"غزل بعدی"}],["$","span",null,{"className":"mt-1.5 block truncate font-poem text-sm text-ink transition-colors group-hover:text-accent","children":"دلی که غيب‌نمای است و جام جم دارد ۱۱۹"}]]}]]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#faf9f7"}]]}],"$La","$Lb"]}],"isPartial":"$@c","staleTime":"$8","varyParams":null},{"rsc":"$Ld","isPartial":"$@e","staleTime":"$8","varyParams":"$f"},{"rsc":"$L10","isPartial":"$@11","staleTime":"$8","varyParams":"$f"},{"rsc":"$L12","isPartial":"$@13","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
+16:I[97367,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"MetadataBoundary"]
+17:I[39756,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"default"]
+18:I[37457,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"default"]
+19:I[40206,["/sse/_next/static/chunks/3k8ylgpkxw1em.js"],"FontPicker"]
+:HL["/sse/_next/static/chunks/1d8f_uwnblu_5.css","style"]
+6:null
+a:["$","div",null,{"hidden":true,"children":["$","$L16",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"بتی دارم که گرد گل ز سنبل سایبان دارد ۱۲۰ | رَوَق"}],["$","meta","1",{"name":"description","content":"آرشیو پژوهشی غزلیات حافظ: متن کامل غزل‌ها، آماده برای پژوهش متن‌شناختی و نسخه‌شناسی."}]]}]}]}]
+b:["$","meta",null,{"name":"next-size-adjust","content":""}]
+d:["$","$1","c",{"children":[null,["$","$L17",null,{"parallelRouterKey":"children","template":["$","$L18",null,{}]}]]}]
+10:["$","$1","c",{"children":[null,["$","$L17",null,{"parallelRouterKey":"children","template":["$","$L18",null,{}]}]]}]
+12:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sse/_next/static/chunks/1d8f_uwnblu_5.css","precedence":"next"}],["$","script","script-0",{"src":"/sse/_next/static/chunks/3k8ylgpkxw1em.js","async":true}]],["$","html",null,{"lang":"fa","dir":"rtl","className":"vazirmatn_1b163a83-module__bLiBAq__variable irannastaliq_4649120f-module__uDgL1W__variable","children":["$","body",null,{"className":"min-h-dvh flex flex-col","data-font":"nastaliq","children":[["$","style",null,{"children":"\n          body[data-font=\"nastaliq\"] { --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif; }\n          body[data-font=\"vazirmatn\"] { --font-poem: var(--font-vazirmatn), serif; }\n        "}],["$","a",null,{"href":"#main","className":"sr-only focus:not-sr-only focus:absolute focus:top-3 focus:start-3 focus:z-50 focus:rounded-sm focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white","children":"پرش به محتوای اصلی"}],["$","header",null,{"className":"border-b border-rule bg-paper/85 backdrop-blur-sm sticky top-0 z-40","children":["$","div",null,{"className":"mx-auto w-full max-w-5xl px-5 sm:px-8","children":["$","div",null,{"className":"flex h-16 items-center justify-between gap-6","children":[["$","$L2",null,{"href":"/","className":"group flex items-baseline gap-2.5 text-ink transition-colors hover:text-accent","children":[["$","span",null,{"className":"text-lg font-semibold tracking-tight","children":"رَوَق"}],["$","span",null,{"className":"hidden text-xs text-ink-faint sm:inline","children":"گنجوردهٔ دیوان حافظ"}]]}],["$","nav",null,{"aria-label":"ناوبری اصلی","children":["$","ul",null,{"className":"flex items-center gap-1","children":[["$","li","/poems",{"children":["$","$L2",null,{"href":"/poems","className":"rounded-sm px-3 py-2 text-sm text-ink-muted transition-colors hover:bg-accent-soft hover:text-accent","children":"غزل‌ها"}]}]]}]}],["$","$L19",null,{}]]}]}]}],["$","main",null,{"id":"main","className":"flex-1","children":["$","$L17",null,{"parallelRouterKey":"children","template":["$","$L18",null,{}],"notFound":[["$","div",null,{"className":"mx-auto w-full max-w-2xl px-5 py-24 text-center sm:px-8","children":[["$","h1",null,{"className":"text-2xl font-semibold tracking-tight","children":"غزل یافت نشد"}],["$","p",null,{"className":"mt-4 text-sm leading-8 text-ink-muted","children":"مدخلی با این نشانی در گنجورده ثبت نشده است."}],["$","$L2",null,{"href":"/poems","className":"mt-8 inline-block text-sm text-accent transition-colors hover:opacity-75","children":"بازگشت به گنجورده"}]]}],[]]}]}],["$","footer",null,{"className":"mt-24 border-t border-rule","children":["$","div",null,{"className":"mx-auto w-full max-w-5xl px-5 py-10 sm:px-8","children":["$","p",null,{"className":"text-sm leading-7 text-ink-faint","children":"رَوَق — آرشیو دیجیتال غزلیات حافظ. متن‌ها عیناً از منبع داده آمده‌اند و در این نسخه ویرایش نشده‌اند."}]}]}]]}]}]]}]
+8:300
+15:true
+8:C
+14:0
+c:"$undefined"
+e:"$undefined"
+11:"$undefined"
+13:"$undefined"
+7:"$undefined"

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Interface type: a clean, contemporary Persian sans. */
+  --font-sans: var(--font-vazirmatn), ui-sans-serif, system-ui, sans-serif;
+  /* Reading type: a naskh face, chosen for long-form Persian literary text. */
+  --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif;
+
+  /* Neutral, slightly warm paper-grey. Not parchment. */
+  --color-paper: #faf9f7;
+  --color-surface: #ffffff;
+  --color-ink: #1c1b19;
+  --color-ink-muted: #5f5c56;
+  --color-ink-faint: #8c8880;
+  --color-rule: #e6e3dd;
+  --color-rule-strong: #d3cfc7;
+
+  /* Single restrained accent: a deep, calm turquoise. */
+  --color-accent: #14746b;
+  --color-accent-soft: #e6f0ee;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  /* Numerals stay in Persian-script digits wherever they are generated. */
+  .tabular-fa {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Font-picker: three body-level overrides */
+  body[data-font="nastaliq"] { --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+  body[data-font="vazirmatn"] { --font-poem: var(--font-vazirmatn), serif; }
+  body[data-font="nastaliq"] .font-poem { font-family: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+  body[data-font="vazirmatn"] .font-poem { font-family: var(--font-vazirmatn), serif; }
+}

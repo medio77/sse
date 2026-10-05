@@ -1,0 +1,4 @@
+:HL["/sse/_next/static/chunks/1d8f_uwnblu_5.css","style"]
+:HL["/sse/_next/static/media/Vazirmatn_Regular-s.p.0dcb8kz605k8s.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/sse/_next/static/media/irannastaliq-s.p.0sdxjik65o0ea.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"poems","param":null,"prefetchHints":4192,"slots":{"children":{"name":"title","param":{"type":"d","key":"%D8%AF%D9%84%D9%85%20%D8%B1%D9%85%DB%8C%D8%AF%D9%87%E2%80%8C%DB%8C%20%D9%84%D9%88%D9%84%DB%8C%E2%80%8C%D9%88%D8%B4%DB%8C%E2%80%8C%D8%B3%D8%AA%20%D8%B4%D9%88%D8%B1%D8%A7%D9%86%DA%AF%DB%8C%D8%B2%20%DB%B2%DB%B6%DB%B6","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"bfAzgJDeqGP_Uc616O1JO"}
