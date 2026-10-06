@@ -56,6 +56,12 @@
   /* Font-picker: three body-level overrides */
   body[data-font="nastaliq"] { --font-poem: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
   body[data-font="vazirmatn"] { --font-poem: var(--font-vazirmatn), serif; }
-  body[data-font="nastaliq"] .font-poem { font-family: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
-  body[data-font="vazirmatn"] .font-poem { font-family: var(--font-vazirmatn), serif; }
+  body[data-font="nastaliq"] .font-poem {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; font-family: var(--font-irannastaliq), var(--font-vazirmatn), serif; }
+  body[data-font="vazirmatn"] .font-poem {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; font-family: var(--font-vazirmatn), serif; }
 }

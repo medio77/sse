@@ -51,7 +51,7 @@ export default async function PoemPage({
       </Link>
 
       <header className="mt-8 border-b border-rule pb-8">
-        <h1 className="font-poem text-xl leading-[2] font-semibold tracking-tight text-ink sm:text-2xl sm:leading-[2.1]">
+        <h1 className="font-vazirmatn text-xl leading-[2] font-semibold tracking-tight text-ink sm:text-2xl sm:leading-[2.1]">
           {poem.title}
         </h1>
         <p className="tabular-fa mt-3 text-xs text-ink-faint">
