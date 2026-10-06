@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RandomPoem } from "@/components/random-poem";
 import { getAllPoems, toPoemEntries } from "@/lib/poems";
 import { PoemList } from "@/components/poem/poem-list";
 
@@ -29,6 +30,7 @@ export default function HomePage() {
           >
             ورود به گنجوردهٔ غزل‌ها
           </Link>
+          <RandomPoem />
           <span className="tabular-fa text-sm text-ink-faint">
             {poems.length.toLocaleString("fa-IR")} غزل
           </span>
