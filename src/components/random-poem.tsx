@@ -57,7 +57,7 @@ export function RandomPoem() {
             onClick={(e) => e.stopPropagation()}
           >
             <p className="text-xs text-ink-faint mb-3">غزل تصادفی</p>
-            <h2 className="font-poem text-2xl leading-[2] font-semibold text-ink sm:text-3xl sm:leading-[2.1] mb-6">
+            <h2 className="font-vazirmatn text-2xl leading-[2] font-semibold text-ink sm:text-3xl sm:leading-[2.1] mb-6">
               {selected}
             </h2>
             <div className="text-xs text-ink-faint">در حال هدایت…</div>
