@@ -42,7 +42,7 @@ export default async function PoemPage({
   const next = index < siblings.length - 1 ? siblings[index + 1] : undefined;
 
   return (
-    <article className="mx-auto w-full max-w-2xl px-5 py-12 sm:px-8 sm:py-20">
+    <article className="mx-auto w-full max-w-5xl px-5 py-12 sm:px-8 sm:py-20">
       <Link
         href="/poems"
         className="text-sm text-ink-faint transition-colors hover:text-accent"

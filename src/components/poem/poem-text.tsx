@@ -17,7 +17,7 @@ export function PoemText({ text }: { text: string }) {
   return (
     <div dir="rtl" lang="fa" className="font-poem text-ink text-[1.0625rem] leading-[2.35] tracking-normal sm:text-xl sm:leading-[2.4]">
       {pairs.map((pair, idx) => (
-        <div key={idx} className="flex items-baseline gap-4 sm:gap-6 py-2 sm:py-3" dir="rtl">
+        <div key={idx} className="flex items-baseline gap-1 sm:gap-2 py-2 sm:py-3" dir="rtl">
           <span className="min-w-0 flex-1 whitespace-pre-wrap text-left">{pair[0]}</span>
           {pair[1] ? (
             <>
