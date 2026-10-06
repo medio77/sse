@@ -76,6 +76,11 @@ src/components/poem/        poem-specific components (not generic cards)
 src/app/                    routes
 ```
 
+## Features
+
+- Random poem selection (`انتخاب تصادفی`) on the landing page.
+- Font picker (`قلم`) in the header — toggle between Nastaliq, Vazirmatn, and Naskh Arabic.
+
 ## Adding future entities
 
 Related entities should attach to a poem by its `title`, keyed through
