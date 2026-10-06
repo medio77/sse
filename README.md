@@ -80,6 +80,7 @@ src/app/                    routes
 
 - Random poem selection (`انتخاب تصادفی`) on the landing page.
 - Font picker (`قلم`) in the header — toggle between Nastaliq, Vazirmatn, and Naskh Arabic.
+- Couplet pairs (`bayt`) display with left/right hemistich alignment; wider reading column (`max-w-5xl`).
 
 ## Adding future entities
 
