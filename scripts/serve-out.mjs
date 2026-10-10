@@ -6,9 +6,11 @@
  */
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
-import { extname, join, normalize } from "node:path";
+import { extname, join, normalize, posix } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = new URL("../out", import.meta.url).pathname;
+const root = posix.join(posix.dirname(fileURLToPath(import.meta.url).replaceAll("\\", "/")), "..", "out");
+
 const port = Number(process.env.PORT ?? 4321);
 
 const MIME = {
@@ -31,7 +33,8 @@ createServer(async (req, res) => {
     let pathname = decodeURIComponent(url.pathname);
     if (pathname.endsWith("/")) pathname += "index.html";
 
-    const filePath = join(root, normalize(pathname).replace(/^(\.\.[/\\])+/, ""));
+    const filePath = join(root, normalize(pathname.replace(/^\//, "")));
+
     const body = await readFile(filePath);
     res.writeHead(200, {
       "Content-Type": MIME[extname(filePath)] ?? "application/octet-stream",
