@@ -34,6 +34,7 @@ createServer(async (req, res) => {
     if (pathname.endsWith("/")) pathname += "index.html";
 
     const filePath = join(root, normalize(pathname.replace(/^\//, "")));
+    console.log("PATH:", filePath);
 
     const body = await readFile(filePath);
     res.writeHead(200, {
@@ -50,6 +51,6 @@ createServer(async (req, res) => {
       res.end("404");
     }
   }
-}).listen(port, () => {
-  console.log(`serving ./out at http://localhost:${port}`);
+}).listen({ host: "0.0.0.0", port }, () => {
+  console.log(`serving ./out at http://0.0.0.0:${port}`);
 });
