@@ -1,13 +1,9 @@
 import Link from "next/link";
 import { RandomPoem } from "@/components/random-poem";
-import { getAllPoems, toPoemEntries } from "@/lib/poems";
-import { PoemList } from "@/components/poem/poem-list";
-
-const FEATURED = 6;
+import { getAllPoems } from "@/lib/poems";
 
 export default function HomePage() {
   const poems = getAllPoems();
-  const featured = toPoemEntries(poems.slice(0, FEATURED));
 
   return (
     <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
@@ -35,33 +31,6 @@ export default function HomePage() {
             {poems.length.toLocaleString("fa-IR")} غزل
           </span>
         </div>
-      </section>
-
-      {/* A short selection. The full archive lives at /poems. */}
-      <section className="py-14 sm:py-16">
-        <div className="flex items-baseline justify-between gap-4 pb-6">
-          <h2 className="text-lg font-semibold tracking-tight">
-            گزیدهٔ غزل‌ها
-          </h2>
-          <Link
-            href="/poems"
-            className="text-sm text-accent transition-colors hover:opacity-75"
-          >
-            همهٔ غزل‌ها ←
-          </Link>
-        </div>
-
-        <PoemList entries={featured} />
-
-        {poems.length > FEATURED ? (
-          <p className="pt-8 text-sm text-ink-faint">
-            و{" "}
-            <span className="tabular-fa">
-              {(poems.length - FEATURED).toLocaleString("fa-IR")}
-            </span>{" "}
-            غزل دیگر در گنجورده.
-          </p>
-        ) : null}
       </section>
     </div>
   );
