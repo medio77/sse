@@ -61,14 +61,12 @@ export function getPoemByTitle(title: string): Poem | undefined {
 /**
  * A lightweight view of a poem for listings.
  *
- * List pages ship only these fields to the client. Poem bodies stay on the
+ * List pages ship only the title to the client. Poem bodies stay on the
  * server/static side, which keeps the index page's payload small even when
  * sorting reorders the whole collection in the browser.
  */
 export type PoemEntry = {
   title: string;
-  /** The poem's opening line, used as a subtitle in listings. */
-  opening: string;
   /** The ghazal number parsed from the source `sequence`, or null when absent. */
   number: number | null;
 };
@@ -98,22 +96,10 @@ export function ghazalNumber(sequence: string): number | null {
   return Number.isNaN(value) ? null : value;
 }
 
-const NUMBERED_LINE = /^غزل\s+نمره/;
-
-/** The first meaningful line of a poem: its opening hemistich. */
-function openingLine(description: string): string {
-  const line = description
-    .split("\n")
-    .map((l) => l.trim())
-    .find((l) => l.length > 0 && !NUMBERED_LINE.test(l));
-  return line ?? "";
-}
-
 /** Projects poems down to their listing fields. */
 export function toPoemEntries(poems: Poem[]): PoemEntry[] {
   return poems.map((poem) => ({
     title: poem.title,
-    opening: openingLine(poem.description),
     number: ghazalNumber(poem.sequence),
   }));
 }

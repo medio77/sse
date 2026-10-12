@@ -36,11 +36,6 @@ export function PoemList({
               <span className="block font-poem text-base leading-9 text-ink transition-colors group-hover:text-accent sm:text-lg">
                 {entry.title}
               </span>
-              {entry.opening && entry.opening !== entry.title ? (
-                <span className="mt-1 block truncate text-sm text-ink-faint">
-                  {entry.opening}
-                </span>
-              ) : null}
             </span>
           </Link>
         </li>
