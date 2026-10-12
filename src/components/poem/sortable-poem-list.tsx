@@ -5,8 +5,6 @@ import type { PoemEntry } from "@/lib/poems";
 import { PoemList } from "@/components/poem/poem-list";
 import { PoemSortControls, type SortKey } from "@/components/poem/poem-sort-controls";
 
-const collator = new Intl.Collator("fa", { sensitivity: "base" });
-
 /**
  * Holds the sort state and reorders the list in place.
  *
@@ -15,33 +13,23 @@ const collator = new Intl.Collator("fa", { sensitivity: "base" });
  * poem's title remains its identifier regardless of where it sits in the list.
  */
 export function SortablePoemList({ entries }: { entries: PoemEntry[] }) {
-  const [sort, setSort] = useState<SortKey>("source");
+  const [sort, setSort] = useState<SortKey>("number-asc");
 
   const sorted = useMemo(() => {
     // Copy first: never mutate the props array.
     const list = entries.slice();
 
-    switch (sort) {
-      case "number-asc":
-      case "number-desc": {
-        const direction = sort === "number-asc" ? 1 : -1;
-        // Entries without a number (programme announcements) sort last either way.
-        list.sort((a, b) => {
-          const na = a.number;
-          const nb = b.number;
-          if (na === null && nb === null) return 0;
-          if (na === null) return 1;
-          if (nb === null) return -1;
-          return (na - nb) * direction;
-        });
-        return list;
-      }
-      case "alphabetical":
-        list.sort((a, b) => collator.compare(a.title, b.title));
-        return list;
-      default:
-        return list;
-    }
+    const direction = sort === "number-asc" ? 1 : -1;
+    // Entries without a number (programme announcements) sort last either way.
+    list.sort((a, b) => {
+      const na = a.number;
+      const nb = b.number;
+      if (na === null && nb === null) return 0;
+      if (na === null) return 1;
+      if (nb === null) return -1;
+      return (na - nb) * direction;
+    });
+    return list;
   }, [entries, sort]);
 
   return (
