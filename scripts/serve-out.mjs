@@ -31,10 +31,19 @@ createServer(async (req, res) => {
   try {
     const url = new URL(req.url ?? "/", "http://localhost");
     let pathname = decodeURIComponent(url.pathname);
-    if (pathname.endsWith("/")) pathname += "index.html";
+    if (pathname.endsWith("/")) {
+      pathname += "index.html";
+    } else {
+      // Dynamic segment routes (e.g. /poems/<title>) don't end with `/`.
+      // Treat a path whose last segment has no file extension as a page dir.
+      const rest = pathname.replace(/^\//, "");
+      const last = rest.split("/").pop() || rest;
+      if (!last.includes(".")) {
+        pathname += "/index.html";
+      }
+    }
 
     const filePath = join(root, normalize(pathname.replace(/^\//, "")));
-    console.log("PATH:", filePath);
 
     const body = await readFile(filePath);
     res.writeHead(200, {

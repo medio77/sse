@@ -26,14 +26,14 @@ export function PoemText({ text }: { text: string }) {
         <>
           {/* Mobile: stacked hemistichs with a dashed divider between couplets. */}
           <div className="sm:hidden flex flex-col py-2" dir="rtl">
-            <span className="whitespace-pre-wrap text-right">{pair[0]}</span>
+            <span className="whitespace-pre-wrap text-center">{pair[0]}</span>
             {pair[1] && (
               <>
-                <span className="whitespace-pre-wrap text-right">{pair[1]}</span>
+                <span className="whitespace-pre-wrap text-center">{pair[1]}</span>
                 {idx < pairs.length - 1 && (
                   <div
                     key={idx}
-                    className="w-full border-b-2 border-dashed border-ink-faint"
+                    className="w-full border-b border-dashed border-ink-faint"
                     aria-hidden
                   />
                 )}
