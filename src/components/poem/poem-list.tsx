@@ -28,7 +28,9 @@ export function PoemList({
           >
             {showIndex ? (
               <span className="tabular-fa w-10 shrink-0 text-sm text-ink-faint">
-                {(i + 1).toLocaleString("fa-IR")}
+                {entry.number != null
+                  ? entry.number.toLocaleString("fa-IR")
+                  : (i + 1).toLocaleString("fa-IR")}
               </span>
             ) : null}
 
