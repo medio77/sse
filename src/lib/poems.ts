@@ -1,4 +1,4 @@
-import episodes from "@/data/episodes.json";
+import Episodes from "@/data/episodes.json";
 
 /**
  * The poem is the canonical entity of this archive.
@@ -12,23 +12,27 @@ export type Poem = {
   readonly title: string;
   /** Raw source text, preserved exactly as provided. */
   readonly description: string;
+  /** The ghazal number as stored in the source JSON (e.g. "495"). */
+  readonly sequence: string;
 };
 
 type RawEpisode = {
   title?: unknown;
   description?: unknown;
+  sequence?: unknown;
 };
 
 function toPoem(raw: RawEpisode): Poem {
   return {
     title: typeof raw.title === "string" ? raw.title : "",
     description: typeof raw.description === "string" ? raw.description : "",
+    sequence: typeof raw.sequence === "string" ? raw.sequence : "000",
   };
 }
 
 /** All poems, in source order. Stable across builds. */
 export function getAllPoems(): Poem[] {
-  return (episodes as RawEpisode[]).map(toPoem);
+  return (Episodes as RawEpisode[]).map(toPoem);
 }
 
 /**
@@ -65,24 +69,25 @@ export type PoemEntry = {
   title: string;
   /** The poem's opening line, used as a subtitle in listings. */
   opening: string;
+  /** The ghazal number parsed from the source `sequence`, or null when absent. */
+  number: number | null;
 };
 
 const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
 const ARABIC_DIGITS = "٠١٢٣٤٥٦٧٨٩";
 
 /**
- * The ghazal number encoded in a title, or null when the title has none
- * (a few entries are programme announcements rather than ghazals).
- *
- * This is derived for display and sorting only. It is never used as an
- * identifier and never written back into the title.
+ * The ghazal number derived from a `sequence` string in the source JSON.
+ * It may be stored in Persian or Arabic digits ("۴۹۵") and is derived for
+ * display and sorting only — never used as an identifier.
  */
 const DIGIT_MAP: Record<string, string> = Object.fromEntries(
   [...PERSIAN_DIGITS, ...ARABIC_DIGITS].map((char, i) => [char, String(i % 10)]),
 );
 
-export function ghazalNumber(title: string): number | null {
-  const match = /([۰-۹٠-٩0-9]+)\s*$/.exec(title);
+/** The ghazal number encoded in a `sequence` string from the source JSON. */
+export function ghazalNumber(sequence: string): number | null {
+  const match = /([0-9]+)$/.exec(sequence);
   if (!match) return null;
 
   const digits = match[1]
@@ -109,6 +114,7 @@ export function toPoemEntries(poems: Poem[]): PoemEntry[] {
   return poems.map((poem) => ({
     title: poem.title,
     opening: openingLine(poem.description),
+    number: ghazalNumber(poem.sequence),
   }));
 }
 

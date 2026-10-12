@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ghazalNumber, type PoemEntry } from "@/lib/poems";
+import type { PoemEntry } from "@/lib/poems";
 import { PoemList } from "@/components/poem/poem-list";
 import { PoemSortControls, type SortKey } from "@/components/poem/poem-sort-controls";
 
@@ -27,8 +27,8 @@ export function SortablePoemList({ entries }: { entries: PoemEntry[] }) {
         const direction = sort === "number-asc" ? 1 : -1;
         // Entries without a number (programme announcements) sort last either way.
         list.sort((a, b) => {
-          const na = ghazalNumber(a.title);
-          const nb = ghazalNumber(b.title);
+          const na = a.number;
+          const nb = b.number;
           if (na === null && nb === null) return 0;
           if (na === null) return 1;
           if (nb === null) return -1;
