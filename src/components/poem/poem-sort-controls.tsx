@@ -5,23 +5,19 @@ import { cn } from "@/lib/utils";
 export type SortKey = "source" | "number-asc" | "number-desc" | "alphabetical";
 
 const OPTIONS: Array<{ key: SortKey; label: string }> = [
-  { key: "source", label: "ترتیب منبع" },
   { key: "number-asc", label: "شمارهٔ غزل ↑" },
   { key: "number-desc", label: "شمارهٔ غزل ↓" },
-  { key: "alphabetical", label: "الفبا" },
 ];
 
-const DESCRIPTIONS: Record<SortKey, string> = {
-  source: "مرتب‌سازی بر اساس ترتیب دادهٔ منبع",
+const DESCRIPTIONS: Record<Extract<SortKey, "number-asc" | "number-desc">, string> = {
   "number-asc": "مرتب‌سازی بر اساس شمارهٔ غزل، از کم به زیاد",
   "number-desc": "مرتب‌سازی بر اساس شمارهٔ غزل، از زیاد به کم",
-  alphabetical: "مرتب‌سازی بر اساس حروف الفبا",
 };
 
 /**
  * A compact segmented control. Deliberately text buttons rather than a select
- * element: four short Persian labels read better inline than a dropdown, and
- * the control stays legible at mobile widths.
+ * element: short Persian labels read better inline than a dropdown, and the
+ * control stays legible at mobile widths.
  */
 export function PoemSortControls({
   value,
@@ -45,7 +41,7 @@ export function PoemSortControls({
             type="button"
             onClick={() => onChange(option.key)}
             aria-pressed={active}
-            title={DESCRIPTIONS[option.key]}
+            title={DESCRIPTIONS[option.key as Extract<SortKey, "number-asc" | "number-desc">]}
             className={cn(
               "rounded-sm px-2.5 py-1.5 text-xs transition-colors",
               active
