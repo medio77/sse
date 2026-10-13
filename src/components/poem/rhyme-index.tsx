@@ -90,6 +90,7 @@ export function RhymeIndex() {
               key={letter}
               href={`#${displayName}`}
               aria-current={active === displayName ? "true" : undefined}
+              onClick={() => setActive(displayName)}
               className={cn(
                 "rounded-sm px-2.5 py-1.5 text-xs transition-colors",
                 active === displayName
