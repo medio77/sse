@@ -57,6 +57,11 @@ export function RhymeIndex() {
   const [active, setActive] = useState(letters[0]);
 
   useEffect(() => {
+    const header = document.querySelector('header');
+    const margin = header?.offsetHeight || 0;
+    for (const h of document.querySelectorAll('.poem-group h3')) {
+      (h as HTMLElement).style.scrollMarginTop = `${margin}px`;
+    }
     const sections = letters.map((l) => document.getElementById(l));
     const observer = new IntersectionObserver(
       (entries) => {
@@ -97,17 +102,17 @@ export function RhymeIndex() {
           );
         })}
       </div>
-      <div className="mt-8 space-y-12">
+      <div className="mt-8">
         {letters.map((letter) => {
           const displayName = letter === "ا" ? "الف" : letter;
           return (
-            <div key={letter} id={displayName} className="poem-group">
-              <h3 className="mb-4 text-lg font-semibold tracking-tight text-accent">
+            <div key={letter} className="poem-group mb-12">
+              <h3 id={displayName} className="scroll-mt-0 mb-4 text-lg font-semibold tracking-tight text-accent">
                 {displayName}
               </h3>
-            <ol className="border-t border-rule">
-              {groups[letter].map((poem) => (
-                <li key={poem.title} className="border-b border-rule">
+              <ol className="border-t border-rule">
+                {groups[letter].map((poem) => (
+                  <li key={poem.title} className="border-b border-rule">
                   <Link
                     href={poemPath(poem.title)}
                     className={cn(
