@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPoems } from "@/lib/poems";
 import { RhymeIndex } from "@/components/poem/rhyme-index";
+import { ScrollToPageTopBottom } from "@/components/scroll-buttons";
 
 export const metadata: Metadata = {
   title: "گنجوردهٔ غزل‌ها",
@@ -22,6 +23,7 @@ export default function PoemsIndexPage() {
       </header>
 
       <RhymeIndex />
+      <ScrollToPageTopBottom />
     </div>
   );
 }
