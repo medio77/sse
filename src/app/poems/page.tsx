@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { getAllPoems, toPoemEntries } from "@/lib/poems";
-import { SortablePoemList } from "@/components/poem/sortable-poem-list";
+import { getAllPoems } from "@/lib/poems";
+import { RhymeIndex } from "@/components/poem/rhyme-index";
 
 export const metadata: Metadata = {
   title: "گنجوردهٔ غزل‌ها",
-  description: "فهرست کامل غزل‌های ثبت‌شده در آرشیو.",
+  description: "فهرست کامل غزل‌های ثبت‌شده در آرشیو، فهرست‌شده بر اساس حرف آخر قافیه.",
 };
 
 export default function PoemsIndexPage() {
@@ -21,9 +21,7 @@ export default function PoemsIndexPage() {
         </p>
       </header>
 
-      <div className="py-8">
-        <SortablePoemList entries={toPoemEntries(poems)} />
-      </div>
+      <RhymeIndex />
     </div>
   );
 }
