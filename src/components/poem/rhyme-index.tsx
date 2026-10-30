@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getAllPoems, poemPath, ghazalNumber } from "@/lib/poems";
-import { useEffect, useState } from "react";
 
 /** Full Persian alphabet, in dictionary order. */
 const ALPHA = "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی";
@@ -54,30 +53,6 @@ export function RhymeIndex() {
   const poems = getAllPoems();
   const groups = groupByRhymeLetter(poems);
   const letters = ALPHA.split("").filter((l) => groups[l]?.length);
-  const [active, setActive] = useState(letters[0]);
-
-  useEffect(() => {
-    const header = document.querySelector('header');
-    const margin = header?.offsetHeight || 0;
-    for (const h of document.querySelectorAll('.poem-group h3')) {
-      (h as HTMLElement).style.scrollMarginTop = `${margin}px`;
-    }
-    const sections = letters.map((l) => document.getElementById(l));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        }
-      },
-      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
-    );
-    for (const section of sections) {
-      if (section) observer.observe(section);
-    }
-    return () => observer.disconnect();
-  }, [letters]);
 
   return (
     <section id="rhyme-index" className="border-b border-rule py-12 sm:py-16">
@@ -89,14 +64,7 @@ export function RhymeIndex() {
             <a
               key={letter}
               href={`#${displayName}`}
-              aria-current={active === displayName ? "true" : undefined}
-              onClick={() => setActive(displayName)}
-              className={cn(
-                "rounded-sm px-2.5 py-1.5 text-xs transition-colors",
-                active === displayName
-                  ? "bg-accent-soft text-accent"
-                  : "text-ink-muted hover:bg-accent-soft/60 hover:text-accent"
-              )}
+              className="rounded-sm px-2.5 py-1.5 text-xs text-ink-muted hover:bg-accent-soft/60 hover:text-accent transition-colors"
             >
               {displayName}
             </a>
