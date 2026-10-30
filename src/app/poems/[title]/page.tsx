@@ -47,7 +47,7 @@ export default async function PoemPage({
         href="/poems"
         className="text-sm text-ink-faint transition-colors hover:text-accent"
       >
-        → بازگشت به گنجورده
+        → بازگشت به دفتر غزل‌ها
       </Link>
 
       <header className="mt-8 border-b border-rule pb-8">
@@ -56,7 +56,7 @@ export default async function PoemPage({
         </h1>
         <p className="tabular-fa mt-3 text-xs text-ink-faint">
           شماره {index + 1} از {siblings.length.toLocaleString("fa-IR")} در
-          گنجورده
+          دفتر
         </p>
       </header>
 
@@ -87,7 +87,7 @@ export default async function PoemPage({
           </Link>
         ) : (
           <span className="bg-surface px-5 py-4 text-xs text-ink-faint/70">
-            نخستین غزل گنجورده
+            نخستین غزل دفتر
           </span>
         )}
 
@@ -103,7 +103,7 @@ export default async function PoemPage({
           </Link>
         ) : (
           <span className="bg-surface px-5 py-4 text-xs text-ink-faint/70">
-            واپسین غزل گنجورده
+            واپسین غزل دفتر
           </span>
         )}
       </nav>
