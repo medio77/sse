@@ -26,7 +26,7 @@ export default function HomePage() {
             دربارهٔ دفتر سخن
           </h2>
 
-          <div className="mt-5 space-y-5 text-base leading-9 text-ink-muted sm:text-lg sm:leading-10">
+          <div className="mt-5 space-y-5 text-base leading-9 text-ink-muted text-justify sm:text-lg sm:leading-10">
             <p>
               دفتر سخن، آرشیوی دیجیتال و مستقل از محتوای پادکست
               «صدای سخن عشق» است؛ تلاشی از سوی یکی از علاقه‌مندان
@@ -42,9 +42,29 @@ export default function HomePage() {
             </p>
 
             <p>
-              این پروژه مستقل و غیررسمی، با رویکردی متن‌باز
+              این پروژه مستقل و غیررسمی، با رویکردی{' '}
+              <Link
+                href="https://github.com/medio77/sse"
+                className="text-accent hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                متن‌باز
+              </Link>{' '}
               توسعه پیدا می‌کند و از مشارکت علاقه‌مندان برای
               تکمیل، اصلاح و بهبود آرشیو استقبال می‌کند.
+            </p>
+
+            <p className="mt-2 text-xs text-ink-faint">
+              مشارکت:{' '}
+              <Link
+                href="https://github.com/medio77/sse"
+                className="text-accent hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/medio77/sse
+              </Link>
             </p>
           </div>
         </div>
