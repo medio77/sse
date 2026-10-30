@@ -1,7 +1,8 @@
+
 import Link from "next/link";
 import { FontPicker } from "@/components/font-picker";
 
-const NAV = [{ href: "/poems", label: "غزل‌ها" }];
+const NAV = [{ href: "/poems", label: "آرشیو غزل‌ها" }];
 
 export function SiteHeader() {
   return (
@@ -12,9 +13,11 @@ export function SiteHeader() {
             href="/"
             className="group flex items-baseline gap-2.5 text-ink transition-colors hover:text-accent"
           >
-            <span className="text-lg font-semibold tracking-tight">رَوَق</span>
+            <span className="text-lg font-semibold tracking-tight">
+              دفتر سخن
+            </span>
             <span className="hidden text-xs text-ink-faint sm:inline">
-              گنجوردهٔ دیوان حافظ
+              از شنیدن تا خواندن
             </span>
           </Link>
 
@@ -32,6 +35,7 @@ export function SiteHeader() {
               ))}
             </ul>
           </nav>
+
           <FontPicker />
         </div>
       </div>

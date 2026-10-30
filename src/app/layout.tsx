@@ -7,11 +7,11 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "رَوَق — گنجوردهٔ دیوان حافظ",
-    template: "%s | رَوَق",
+    default: "دفتر سخن — از شنیدن تا خواندن",
+    template: "%s | دفتر سخن",
   },
   description:
-    "آرشیو پژوهشی غزلیات حافظ: متن کامل غزل‌ها، آماده برای پژوهش متن‌شناختی و نسخه‌شناسی.",
+    "دفتر سخن، آرشیوی دیجیتال و مستقل از محتوای پادکست صدای سخن عشق؛ مجموعه‌ای از اشعار بر اساس تصحیح این پادکست، با امکان جست‌وجو و مشارکت علاقه‌مندان.",
 };
 
 export const viewport: Viewport = {
