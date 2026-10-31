@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://medio77.github.io/sse/sitemap.xml
