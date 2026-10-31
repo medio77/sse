@@ -7,8 +7,8 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "دفتر سخن — از شنیدن تا خواندن",
-    template: "%s | دفتر سخن",
+    default: "دفترِ سخن — از شنیدن تا خواندن",
+    template: "%s | دفترِ سخن",
   },
   description:
     "دفتر سخن، آرشیوی دیجیتال و مستقل از محتوای پادکست صدای سخن عشق؛ مجموعه‌ای از اشعار بر اساس تصحیح این پادکست، با امکان جست‌وجو و مشارکت علاقه‌مندان.",

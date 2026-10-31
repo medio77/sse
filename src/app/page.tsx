@@ -10,16 +10,36 @@ export default function HomePage() {
     <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
       <section className="border-b border-rule py-16 sm:py-24">
         <p className="text-sm text-accent">
-          آرشیو دیجیتال صدای سخن عشق
+          آرشیو دیجیتال «صدای سخن عشق»
         </p>
 
         <h1 className="mt-4 max-w-2xl text-3xl leading-[1.7] font-semibold tracking-tight text-ink sm:text-4xl sm:leading-[1.6]">
-          دفتر سخن
+          دفترِ سخن
         </h1>
 
         <p className="mt-4 text-lg leading-9 text-ink-muted sm:text-xl">
           از شنیدن تا خواندن
         </p>
+
+        <div className="mt-6 flex items-center gap-2 text-sm">
+          <span className="text-ink-faint">پادکست «صدای سخن عشق» در:</span>
+          <Link
+            href="https://t.me/seda_sokhan_eshq"
+            className="rounded-sm border border-rule px-3 py-1.5 text-xs text-ink-muted hover:border-accent hover:text-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            تلگرام
+          </Link>
+          <Link
+            href="https://castbox.fm/vh/7402246"
+            className="rounded-sm border border-rule px-3 py-1.5 text-xs text-ink-muted hover:border-accent hover:text-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            کست‌باکس
+          </Link>
+        </div>
 
         <div className="mt-10 max-w-3xl">
           <h2 className="text-lg font-semibold text-ink">

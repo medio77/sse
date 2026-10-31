@@ -14,7 +14,7 @@ export function SiteHeader() {
             className="group flex items-baseline gap-2.5 text-ink transition-colors hover:text-accent"
           >
             <span className="text-lg font-semibold tracking-tight">
-              دفتر سخن
+              دفترِ سخن
             </span>
             <span className="hidden text-xs text-ink-faint sm:inline">
               از شنیدن تا خواندن
