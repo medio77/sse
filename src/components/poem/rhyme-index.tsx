@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getAllPoems, poemPath, ghazalNumber } from "@/lib/poems";
+import { useEffect } from "react";
 
 /** Full Persian alphabet, in dictionary order. */
 const ALPHA = "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی";
@@ -53,6 +54,15 @@ export function RhymeIndex() {
   const poems = getAllPoems();
   const groups = groupByRhymeLetter(poems);
   const letters = ALPHA.split("").filter((l) => groups[l]?.length);
+
+  // Offset scroll so the section lands below the header when a letter is clicked.
+  useEffect(() => {
+    const header = document.querySelector("header");
+    const margin = header?.offsetHeight || 0;
+    for (const h of document.querySelectorAll(".poem-group h3")) {
+      (h as HTMLElement).style.scrollMarginTop = `${margin}px`;
+    }
+  }, []);
 
   return (
     <section id="rhyme-index" className="border-b border-rule py-12 sm:py-16">
