@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   },
   description:
     "دفتر سخن، آرشیوی دیجیتال و مستقل از محتوای پادکست صدای سخن عشق؛ مجموعه‌ای از اشعار بر اساس تصحیح این پادکست، با امکان جست‌وجو و مشارکت علاقه‌مندان.",
+  other: {
+    "google-site-verification": "G__A5NCRFkrY8NSkrffzy2yjqT_ckqYhDlOluabDprs",
+  },
 };
 
 export const viewport: Viewport = {
