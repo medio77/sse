@@ -51,7 +51,7 @@ export default async function PoemPage({
       </Link>
 
       <header className="mt-8 border-b border-rule pb-8">
-        <h1 className="font-vazirmatn text-xl leading-[2] font-semibold tracking-tight text-ink sm:text-2xl sm:leading-[2.1]">
+        <h1 className="font-vazirmatn text-xl leading-[2.25] font-semibold tracking-tight text-ink sm:text-2xl sm:leading-[2.1]">
           {poem.title}
         </h1>
         <p className="tabular-fa mt-3 text-xs text-ink-faint">
@@ -81,7 +81,7 @@ export default async function PoemPage({
             className="group bg-surface px-5 py-4 transition-colors hover:bg-accent-soft/60"
           >
             <span className="block text-xs text-ink-faint">غزل پیشین</span>
-            <span className="mt-1.5 block truncate font-poem text-sm leading-[2] text-ink transition-colors group-hover:text-accent">
+            <span className="mt-1.5 block truncate font-poem text-sm leading-[2.25] text-ink transition-colors group-hover:text-accent">
               {previous.title}
             </span>
           </Link>
@@ -97,7 +97,7 @@ export default async function PoemPage({
             className="group bg-surface px-5 py-4 text-start transition-colors hover:bg-accent-soft/60"
           >
             <span className="block text-xs text-ink-faint">غزل بعدی</span>
-            <span className="mt-1.5 block truncate font-poem text-sm leading-[2] text-ink transition-colors group-hover:text-accent">
+            <span className="mt-1.5 block truncate font-poem text-sm leading-[2.25] text-ink transition-colors group-hover:text-accent">
               {next.title}
             </span>
           </Link>
