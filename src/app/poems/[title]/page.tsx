@@ -81,7 +81,7 @@ export default async function PoemPage({
             className="group bg-surface px-5 py-4 transition-colors hover:bg-accent-soft/60"
           >
             <span className="block text-xs text-ink-faint">غزل پیشین</span>
-            <span className="mt-1.5 block truncate font-poem text-sm leading-[1.75] text-ink transition-colors group-hover:text-accent">
+            <span className="mt-1.5 block truncate font-poem text-sm leading-[2] text-ink transition-colors group-hover:text-accent">
               {previous.title}
             </span>
           </Link>
@@ -97,7 +97,7 @@ export default async function PoemPage({
             className="group bg-surface px-5 py-4 text-start transition-colors hover:bg-accent-soft/60"
           >
             <span className="block text-xs text-ink-faint">غزل بعدی</span>
-            <span className="mt-1.5 block truncate font-poem text-sm leading-[1.75] text-ink transition-colors group-hover:text-accent">
+            <span className="mt-1.5 block truncate font-poem text-sm leading-[2] text-ink transition-colors group-hover:text-accent">
               {next.title}
             </span>
           </Link>
